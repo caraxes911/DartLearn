@@ -155,5 +155,14 @@ void main(List<String> arguments) {
     print('Содержит цифру? $hasInt');
     print('Содержит заглавную букву? $hasUpperCase');
     print('Пароль надежный? $isStrong'); 
+
+  //Task 16 
+    int birthYear = 1995;
+    int birthMonth = 2;
+    int birthDay = 15;
+    int currentYear = 2026;
+    int currentMonth = 2;
+    int currentDay = 18;
+    
 }
     
