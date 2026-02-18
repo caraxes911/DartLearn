@@ -39,10 +39,10 @@ void main(List<String> arguments) {
     print(isRaining || isWeekend);
 
   //Task 5
-  //String firstName = 'Сога';
-  //String lastName = 'Акемура';
+  String firstNamePers = 'Сога';
+  String lastNamePers = 'Акемура';
 
-  //print('Меня зовут $firstName $lastName. Моё имя состоит из ${firstName.length} букв, а фамилия из ${lastName.length} букв');
+  print('Меня зовут $firstNamePers $lastNamePers. Моё имя состоит из ${firstNamePers.length} букв, а фамилия из ${lastNamePers.length} букв');
 
   //Task 6
     double celsius = 25;
@@ -85,12 +85,77 @@ void main(List<String> arguments) {
 
   //Task 11
     int number = 27;
-    int division = number % 5;
-    print('Целых: 5 , $division остаток');
-    int resultNumber =  number % 2;
-    print(resultNumber.isEven);
-    bool third = resultNumber % 3 == false;
-    print(third);
-    
+
+    int quotient = number ~/ 5;
+    int remainder = number % 5;
+    print('$number / 5 = $quotient (целых), остаток $remainder');
+
+    bool isEven = number % 2 == 0;
+    print('Четное ? $isEven');
+
+    bool isMultipleFor3 = number % 3 == 0;
+    print('Кратное 3? $isMultipleFor3');
+
+
+  //Task 12 
+    String word1 = 'Dart';
+    String word2 = 'dart';
+    bool wordsDivision = word1 == word2;
+    print(wordsDivision);
+    bool wordsDivision2 = word1.toLowerCase() == word2;
+    print(wordsDivision2);
+    ///в первом различаются так как в первом слове есть заглавная буква
+    ///во втором я привел к нижнему регистру первую букву слова 1, соотвественно оно идентично второму
+  
+  //Task 13
+    const normalWeight = 25;
+    const underWeight = 18.5;
+    double weight = 68.5;
+    double height = 1.75;
+    double resultIMT = weight/(height * height);
+    String categoryIMT;
+    if(resultIMT < underWeight){
+      categoryIMT = 'Недостаточный вес';
+    } 
+    else if(underWeight <= resultIMT && resultIMT < normalWeight){
+      categoryIMT = 'Норма';
+    }
+    else if (resultIMT >= normalWeight){
+      categoryIMT = 'Избыточный вес';
+    }
+
+  //Task 14
+    int day = 5;
+    int month = 3;
+    int year = 2024;
+    print('${day.toString().padLeft(2, '0')}.${month.toString().padLeft(2, '0')}.${year}');
+    String? monthName;
+    switch(month){ 
+      case 1: monthName = 'Январь';break;
+      case 2: monthName = 'Февраль';break;
+      case 3: monthName = 'Март';break;
+      case 4: monthName = 'Апрель';break;
+      case 5: monthName = 'Май';break;
+      case 6: monthName = 'Июнь';break;
+      case 7: monthName = 'Июль';break;
+      case 8: monthName = 'Август';break;
+      case 9: monthName = 'Сентябрь';break;
+      case 10: monthName = 'Октябрь';break;
+      case 11: monthName = 'Ноябрь';break;
+      case 12: monthName = 'Декабрь';break;
+    }
+    print('${day.toString().padLeft(2, '0')} $monthName $year года');
+
+  //Task 15
+    String password = 'Dart123';
+    bool lengthPassword = password.length >= 8;
+    bool hasInt = RegExp(r'[0-9]').hasMatch(password);
+    bool hasUpperCase = RegExp(r'[A-Z]').hasMatch(password);
+    bool isStrong = lengthPassword && hasInt && hasUpperCase;
+    print('Пароль: $password');
+    print('Длина >= 8? $lengthPassword');
+    print('Содержит цифру? $hasInt');
+    print('Содержит заглавную букву? $hasUpperCase');
+    print('Пароль надежный? $isStrong'); 
 }
     
