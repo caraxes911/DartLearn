@@ -104,8 +104,6 @@ void main(List<String> arguments) {
     print(wordsDivision);
     bool wordsDivision2 = word1.toLowerCase() == word2;
     print(wordsDivision2);
-    ///в первом различаются так как в первом слове есть заглавная буква
-    ///во втором я привел к нижнему регистру первую букву слова 1, соотвественно оно идентично второму
   
   //Task 13
     const normalWeight = 25;
