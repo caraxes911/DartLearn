@@ -163,6 +163,34 @@ void main(List<String> arguments) {
     int currentYear = 2026;
     int currentMonth = 2;
     int currentDay = 18;
-    
+    int personAge = 0;
+    if(birthDay == currentDay && currentMonth == birthMonth)
+    {
+      personAge = currentYear - birthYear;
+    }
+    else if(birthDay == currentDay || currentMonth == birthMonth)
+    {
+      personAge = currentYear - birthYear;
+    }
+    print('Возраст : $personAge');
+
+  //Task 17
+    int yearNow = 2024;
+    bool leapYear = yearNow == 0 % 4 || yearNow == 0 % 400 && yearNow != 0 / 100;
+    if(leapYear = true){
+      print('2024 год високосный?$leapYear');
+    }
+    else if(leapYear = false){
+      print('2024 год високосный?$leapYear');
+    }
+
+  //Task 18
+    String textIT = 'Программирование это интересно';
+    if(textIT.length > 20){
+        textIT.substring(0, 20);
+        //textIT.padRight(3, '...');
+    print('Длина строки: ${textIT.length}');
+    print('Результат: ${textIT.substring(0, 20).padRight(21, '...')}');
+    }
 }
     
